@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,103 +6,107 @@
 }
 
 body {
+  background-color: #f3f4f6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e6f2ff;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
 }
 
+/* Container */
 .container {
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  transition: all 0.3s ease-in-out;
 }
 
-h1 {
+/* Título */
+.container h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #00509e;
-  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #2c3e50;
 }
 
-.input-group {
+/* Input e botão */
+.input-section {
   display: flex;
   margin-bottom: 20px;
 }
 
-input[type="text"] {
-  flex-grow: 1;
+.input-section input {
+  flex: 1;
   padding: 12px 15px;
-  border: 2px solid #00509e;
+  border: 2px solid #ddd;
   border-radius: 8px 0 0 8px;
   font-size: 16px;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border 0.2s;
 }
 
-input[type="text"]:focus {
-  border-color: #0077cc;
+.input-section input:focus {
+  border-color: #61dafb;
 }
 
-button {
+.input-section button {
   padding: 12px 20px;
+  background-color: #61dafb;
   border: none;
-  background-color: #00509e;
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
   border-radius: 0 8px 8px 0;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-button:hover {
-  background-color: #0077cc;
+.input-section button:hover {
+  background-color: #4ec1e7;
 }
 
-ul#taskList {
-  list-style: none;
+/* Lista */
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-ul#taskList li {
-  background: #f0f8ff;
-  padding: 12px 15px;
-  border-radius: 8px;
+ul li {
+  background-color: #f9f9f9;
+  padding: 14px 18px;
   margin-bottom: 12px;
-  font-size: 16px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #003366;
+  border-left: 5px solid #61dafb;
+  transition: all 0.2s ease-in-out;
 }
 
-ul#taskList li button {
-  background: transparent;
-  border: none;
-  color: #cc0000;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 18px;
+ul li:hover {
+  background-color: #eef6f9;
+  transform: scale(1.01);
 }
 
+ul li span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Tarefa feita */
+.done {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Rodapé opcional */
 footer {
-  margin-top: 30px;
+  margin-top: 25px;
   text-align: center;
-  font-size: 14px;
-  color: #003366;
-}
-
-footer a {
-  color: #00509e;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  font-size: 13px;
+  color: #999;
 }
